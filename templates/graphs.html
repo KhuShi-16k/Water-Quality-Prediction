@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Project Analysis</h1>
+        <form>
+        <h2>Feature Importance</h2>
+        <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
+        
+        <h2>Confusion Matrix</h2>
+        <img src="{{ url_for('static', filename='images/confusion_matrix.png') }}" alt="Confusion Matrix">
+        
+        <h2>ROC Curve</h2>
+        <img src="{{ url_for('static', filename='images/roc_curve.png') }}" alt="ROC Curve">
+        
+        <h2>Precision-Recall Curve</h2>
+        <img src="{{ url_for('static', filename='images/precision_recall_curve.png') }}" alt="Precision-Recall Curve">
+        
+        <!--<h2>Feature Distributions</h2>
+        {% for column in feature_columns %}
+            <h3>{{ column }}</h3>
+            <img src="{{ url_for('static', filename='images/distribution_' + column + '.png') }}" alt="Distribution of {{ column }}">
+        {% endfor %}-->
+        
+        <h2>Correlation Heatmap</h2>
+        <img src="{{ url_for('static', filename='images/correlation_heatmap.png') }}" alt="Correlation Heatmap">
+        <a href="/">Home</a>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Potability Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Potability Prediction</h1>
+        <form action="/predict" method="post"><label for="Ph">pH:</label>
+            <input type="number" name="Ph" step="0.001" required>
+            
+            <label for="Hardness">Hardness:</label>
+            <input type="number" name="Hardness" step="0.001" required>
+            
+            <label for="Solids">Solids:</label>
+            <input type="number" name="Solids" step="0.001" required>
+            
+            <label for="Chloramines">Chloramines:</label>
+            <input type="number" name="Chloramines" step="0.001" required>
+            
+            <label for="Sulfate">Sulfate:</label>
+            <input type="number" name="Sulfate" step="0.001" required>
+            
+            <label for="Conductivity">Conductivity:</label>
+            <input type="number" name="Conductivity" step="0.001" required>
+            
+            <label for="Organic_carbon">Organic Carbon:</label>
+            <input type="number" name="Organic_carbon" step="0.001" required>
+            
+            <label for="Trihalomethanes">Trihalomethanes:</label>
+            <input type="number" name="Trihalomethanes" step="0.001" required>
+            
+            <label for="Turbidity">Turbidity:</label>
+            <input type="number" name="Turbidity" step="0.001" required>
+            
+            <div class="button-container">
+                <input class="button" type="submit" value="Predict">
+                <input class="button" type="reset" value="Reset">
+            </div>   
+            <a href="/graphs">Analysis</a>
+        </form>
+    </div>
+</body>
+</html>
